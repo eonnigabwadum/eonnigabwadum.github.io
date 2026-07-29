@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="휴지, 세제, 즉석밥처럼 자주 사는 생활용품 핫딜을 직접 확인해 모아둡니다."
+    />
+    <title>언니가 봐둠 | 오늘 괜찮은 것만</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="profile-header">
+        <img class="profile-image" src="./profile-eonni-bwadum.png" alt="언니가 봐둠" />
+        <div class="profile-copy">
+          <strong>언니가 봐둠</strong>
+          <span>@eonni_bwadum</span>
+        </div>
+        <div class="updated">
+          <span>마지막 확인</span>
+          <strong>오늘 17:30</strong>
+        </div>
+      </header>
+
+      <section class="intro">
+        <p>나도 사려고 보다가</p>
+        <h1>오늘 괜찮은 것만<br />여기 모아뒀어요</h1>
+        <span>별거 없으면 안 올림</span>
+      </section>
+
+      <nav class="date-tabs" aria-label="날짜 선택">
+        <button class="is-active" data-date="오늘">오늘<small>7.29</small></button>
+        <button data-date="어제">어제<small>7.28</small></button>
+      </nav>
+
+      <section class="deal-section">
+        <div class="section-heading">
+          <h2><span id="selectedDate">오늘</span> 봐둔 것</h2>
+          <span id="dealCount">0개</span>
+        </div>
+        <div class="category-filter" aria-label="상품 종류 선택">
+          <button class="is-active" data-category="전체">전체</button>
+          <button data-category="생활">생활</button>
+          <button data-category="식품">식품</button>
+        </div>
+        <div class="deal-list" id="dealList"></div>
+        <div class="empty" id="emptyState" hidden>오늘은 이 종류에서 봐둔 게 없어요.</div>
+      </section>
+
+      <aside class="sample-notice">
+        <strong>지금은 화면을 맞춰보는 중이에요</strong>
+        <p>실제 상품 링크가 준비되면 예시 버튼이 바로 구매 링크로 바뀝니다.</p>
+      </aside>
+
+      <footer>
+        <p>
+          일부 링크를 통해 구매하면 일정액의 수수료를 받을 수 있어요.
+          가격과 품절 여부는 들어가서 한 번 더 확인해주세요.
+        </p>
+        <a href="https://www.instagram.com/eonni_bwadum/" target="_blank" rel="noreferrer">
+          인스타그램으로 돌아가기
+        </a>
+      </footer>
+    </main>
+    <script src="./site.js"></script>
+  </body>
+</html>
