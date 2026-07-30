@@ -2,62 +2,154 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="휴지, 세제, 즉석밥처럼 자주 사는 생활용품 핫딜을 직접 확인해 모아둡니다."
-    />
-    <title>언니가 봐둠 | 오늘 괜찮은 것만</title>
-    <link rel="stylesheet" href="./styles.css?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>언니가 봐둠 - 날짜별 핫딜 시안</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="deal-header">
-        <h1>오늘 봐둔 것</h1>
-        <span>7월 30일</span>
+    <main class="page">
+      <header class="topbar">
+        <h1>오늘 봐둔 것 <span id="header-count">4개</span></h1>
+        <p>가격은 들어가서 한 번 더 봐주세요</p>
       </header>
 
-      <nav class="date-tabs" aria-label="날짜 선택">
-        <button class="is-active" data-date="오늘">오늘<small>7.30</small></button>
-        <button data-date="어제">어제<small>7.29</small></button>
+      <nav class="date-tabs" aria-label="날짜별 핫딜">
+        <button class="date-tab is-active" type="button" data-date="today" data-label="오늘">
+          <strong>오늘</strong>
+          <span>7/30</span>
+        </button>
+        <button class="date-tab" type="button" data-date="yesterday" data-label="어제">
+          <strong>어제</strong>
+          <span>7/29</span>
+        </button>
+        <button class="date-tab" type="button" data-date="0728" data-label="월요일">
+          <strong>월</strong>
+          <span>7/28</span>
+        </button>
+        <button class="date-tab" type="button" data-date="0727" data-label="일요일">
+          <strong>일</strong>
+          <span>7/27</span>
+        </button>
       </nav>
 
       <section class="deal-section">
-        <div class="category-filter" aria-label="상품 종류 선택">
-          <button class="is-active" data-category="전체">전체</button>
-          <button data-category="생활">생활</button>
-          <button data-category="식품">식품</button>
-          <span class="deal-count" id="dealCount">0개</span>
+        <div class="section-head">
+          <h2 id="date-heading">7월 30일</h2>
+          <span id="result-count">4개</span>
         </div>
-        <div class="deal-list" id="dealList"></div>
-        <div class="empty" id="emptyState" hidden>오늘은 이 종류에서 봐둔 게 없어요.</div>
+
+        <div class="deal-list" id="deal-list">
+          <article class="deal-row" data-date="today">
+            <div class="image-wrap">
+              <span class="badge">최근 제일 쌈</span>
+              <img class="product-sheet product-tissue" src="./product-sheet.png" alt="화장지 묶음" />
+            </div>
+            <div class="deal-copy">
+              <p class="store">쿠팡 · 생활</p>
+              <h3>3겹 화장지 30롤</h3>
+              <p class="price-line"><strong>9,950원</strong><del>17,950원</del></p>
+              <p class="unit">한 롤에 약 332원</p>
+              <p class="memo"><span>휴지는 이 정도면 쟁여도 됨</span></p>
+              <button class="deal-link" type="button">상품 보기 <b>→</b></button>
+            </div>
+          </article>
+
+          <article class="deal-row" data-date="today">
+            <div class="image-wrap">
+              <span class="badge">밥값 아낌</span>
+              <img class="product-sheet product-rice" src="./product-sheet.png" alt="즉석밥 묶음" />
+            </div>
+            <div class="deal-copy">
+              <p class="store">쿠팡 · 식품</p>
+              <h3>즉석밥 210g 24개</h3>
+              <p class="price-line"><strong>18,900원</strong><del>27,800원</del></p>
+              <p class="unit">한 개에 약 788원</p>
+              <p class="memo"><span>밥 하나가 800원도 안 함</span></p>
+              <button class="deal-link" type="button">상품 보기 <b>→</b></button>
+            </div>
+          </article>
+
+          <article class="deal-row" data-date="today">
+            <div class="image-wrap">
+              <span class="badge">쿠폰 없이</span>
+              <img class="product-sheet product-detergent" src="./product-sheet.png" alt="세탁세제 두 통" />
+            </div>
+            <div class="deal-copy">
+              <p class="store">11번가 · 생활</p>
+              <h3>액체 세탁세제 2개</h3>
+              <p class="price-line"><strong>12,900원</strong><del>21,900원</del></p>
+              <p class="unit">한 통에 6,450원</p>
+              <p class="memo"><span>무거운 건 배송이 제일 편함</span></p>
+              <button class="deal-link" type="button">상품 보기 <b>→</b></button>
+            </div>
+          </article>
+
+          <article class="deal-row" data-date="today">
+            <div class="image-wrap">
+              <span class="badge">한 팩 천원대</span>
+              <img class="product-sheet product-wipes" src="./product-sheet.png" alt="물티슈 묶음" />
+            </div>
+            <div class="deal-copy">
+              <p class="store">오늘의집 · 생활</p>
+              <h3>도톰한 물티슈 10팩</h3>
+              <p class="price-line"><strong>10,900원</strong><del>15,900원</del></p>
+              <p class="unit">한 팩에 1,090원</p>
+              <p class="memo"><span>떨어지기 전에 사두는 가격</span></p>
+              <button class="deal-link" type="button">상품 보기 <b>→</b></button>
+            </div>
+          </article>
+
+          <article class="deal-row" data-date="yesterday" hidden>
+            <div class="image-wrap">
+              <span class="badge">어제 가격</span>
+              <img class="product-sheet product-rice" src="./product-sheet.png" alt="즉석밥 묶음" />
+            </div>
+            <div class="deal-copy">
+              <p class="store">G마켓 · 식품</p>
+              <h3>즉석밥 작은공기 30개</h3>
+              <p class="price-line"><strong>20,900원</strong><del>29,000원</del></p>
+              <p class="unit">한 개에 약 697원</p>
+              <p class="memo"><span>작은 공기 먹는 집이면 괜찮음</span></p>
+              <button class="deal-link" type="button">상품 보기 <b>→</b></button>
+            </div>
+          </article>
+
+          <article class="deal-row" data-date="yesterday" hidden>
+            <div class="image-wrap">
+              <span class="badge">배송 포함</span>
+              <img class="product-sheet product-detergent" src="./product-sheet.png" alt="세탁세제 두 통" />
+            </div>
+            <div class="deal-copy">
+              <p class="store">쿠팡 · 생활</p>
+              <h3>고농축 세탁세제 2개</h3>
+              <p class="price-line"><strong>14,500원</strong><del>22,900원</del></p>
+              <p class="unit">한 통에 7,250원</p>
+              <p class="memo"><span>어제는 이게 제일 나았어요</span></p>
+              <button class="deal-link" type="button">상품 보기 <b>→</b></button>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty" id="empty-message" hidden>
+          <strong>이날은 올린 게 없어요</strong>
+          <span>괜찮은 물건이 없었나 봐요</span>
+        </div>
       </section>
 
-      <aside class="kakao-invite">
+      <aside class="kakao">
         <div>
-          <strong>카톡으로 받는 게 편한 분은 여기 와요</strong>
-          <p>괜찮은 거 뜰 때만 조용히 올릴게요.</p>
+          <strong>새로 뜨면 카톡으로 볼래요?</strong>
+          <span>수다 없이 핫딜만 올리는 방이에요</span>
         </div>
-        <a href="https://open.kakao.com/o/gaWcWsGi" target="_blank" rel="noreferrer">
-          언니 알림방 들어가기
-        </a>
-      </aside>
-
-      <aside class="sample-notice">
-        <strong>현재 상품은 화면 예시예요</strong>
-        <p>실제 상품 링크가 준비되면 예시 버튼이 구매 링크로 바뀝니다.</p>
+        <a href="https://open.kakao.com/o/gaWcWsGi" target="_blank" rel="noreferrer">들어가기</a>
       </aside>
 
       <footer>
-        <p>
-          일부 링크를 통해 구매하면 일정액의 수수료를 받을 수 있어요.
-          가격과 품절 여부는 들어가서 한 번 더 확인해주세요.
-        </p>
-        <a href="https://www.instagram.com/eonni_bwadum/" target="_blank" rel="noreferrer">
-          인스타그램으로 돌아가기
-        </a>
+        <p>가격과 품절 여부는 구매 전에 한 번 더 확인해주세요.</p>
+        <p>일부 링크를 통해 구매하면 일정 수수료를 받을 수 있어요.</p>
       </footer>
     </main>
-    <script src="./site.js?v=2"></script>
+    <script src="./site.js"></script>
   </body>
 </html>
