@@ -59,7 +59,6 @@ function render() {
       (selectedCategory === "전체" || deal.category === selectedCategory),
   );
 
-  document.querySelector("#selectedDate").textContent = selectedDate;
   document.querySelector("#dealCount").textContent = `${visibleDeals.length}개`;
   document.querySelector("#emptyState").hidden = visibleDeals.length !== 0;
   document.querySelector("#dealList").innerHTML = visibleDeals

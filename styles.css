@@ -124,6 +124,7 @@ button {
 .category-filter {
   padding: 14px 4px 17px;
   display: flex;
+  align-items: center;
   gap: 7px;
 }
 
@@ -143,6 +144,13 @@ button {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--white);
+}
+
+.deal-count {
+  margin-left: auto;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .deal-list {
