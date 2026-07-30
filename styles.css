@@ -43,85 +43,26 @@ button {
   box-shadow: 0 0 34px rgba(0, 0, 0, 0.08);
 }
 
-.profile-header {
-  min-height: 78px;
-  padding: 12px 17px;
+.deal-header {
+  min-height: 88px;
+  padding: 21px 20px 18px;
   display: flex;
-  align-items: center;
-  gap: 11px;
-  border-bottom: 1px solid var(--line);
-  background: var(--white);
-}
-
-.profile-image {
-  width: 51px;
-  height: 51px;
-  flex: 0 0 51px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.profile-copy {
-  min-width: 0;
-  display: grid;
-  gap: 3px;
-}
-
-.profile-copy strong {
-  font-size: 16px;
-}
-
-.profile-copy span,
-.updated span {
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.updated {
-  margin-left: auto;
-  display: grid;
-  justify-items: end;
-  gap: 3px;
-}
-
-.updated strong {
-  font-size: 11px;
-}
-
-.intro {
-  position: relative;
-  padding: 29px 20px 31px;
+  align-items: flex-end;
+  justify-content: space-between;
   border-bottom: 2px solid var(--ink);
   background: var(--yellow);
 }
 
-.intro p {
-  width: fit-content;
-  margin: 0 0 7px;
-  padding: 4px 6px;
-  background: var(--ink);
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 700;
-  transform: rotate(-1deg);
-}
-
-.intro h1 {
+.deal-header h1 {
   margin: 0;
-  font-size: clamp(32px, 9vw, 46px);
-  line-height: 1.08;
-  word-break: keep-all;
+  font-size: 31px;
+  line-height: 1;
 }
 
-.intro > span {
-  position: absolute;
-  right: 18px;
-  bottom: 15px;
-  color: #605700;
+.deal-header span {
+  color: #5f5700;
   font-size: 11px;
   font-weight: 700;
-  transform: rotate(2deg);
 }
 
 .date-tabs {
@@ -320,6 +261,41 @@ button {
   background: #efeee9;
 }
 
+.kakao-invite {
+  margin: 0 15px 11px;
+  padding: 17px;
+  display: grid;
+  gap: 13px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.kakao-invite strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.kakao-invite p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.kakao-invite a {
+  min-height: 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  background: #fee500;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+}
+
 .sample-notice strong {
   display: block;
   margin-bottom: 5px;
@@ -353,14 +329,6 @@ footer a {
 }
 
 @media (max-width: 420px) {
-  .updated span {
-    display: none;
-  }
-
-  .intro {
-    padding-top: 25px;
-  }
-
   .deal-row {
     min-height: 142px;
     grid-template-columns: 98px minmax(0, 1fr);
